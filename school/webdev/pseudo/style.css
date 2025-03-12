@@ -99,7 +99,7 @@ body {
 div.sect-container {
     width: 100%;
     overflow: hidden;
-    padding: 20px 150px 20px 150px;
+    padding: 20px 230px 20px 230px;
 
     &.left {
         display: flex;
@@ -140,7 +140,7 @@ div.sect-container {
 
         p {
             text-wrap: wrap;
-            background: linear-gradient(to right, rgba(150, 150, 150, 0.75), rgba(150, 150, 150, 1), rgba(150, 150, 150, 0.75));
+            background: linear-gradient(to right, rgba(230, 230, 230, 0.75), rgba(230, 230, 230, 1), rgba(230, 230, 230, 0.75));
             background-clip: text;
             color: transparent;
             font-weight: bold;
@@ -149,7 +149,7 @@ div.sect-container {
         }
 
         &:hover p {
-            background: linear-gradient(to right, rgba(150, 150, 150, 1), rgba(150, 150, 150, 1), rgba(150, 150, 150, 1));
+            background: linear-gradient(to right, rgba(230, 230, 230, 1), rgba(230, 230, 230, 1), rgba(230, 230, 230, 1));
             background-clip: text;
             color: transparent;
         }
