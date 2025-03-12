@@ -140,7 +140,7 @@ div.sect-container {
 
         p {
             text-wrap: wrap;
-            background: linear-gradient(to right, rgba(230, 230, 230, 0.75), rgba(230, 230, 230, 1), rgba(230, 230, 230, 0.75));
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75));
             background-clip: text;
             color: transparent;
             font-weight: bold;
@@ -149,7 +149,7 @@ div.sect-container {
         }
 
         &:hover p {
-            background: linear-gradient(to right, rgba(230, 230, 230, 1), rgba(230, 230, 230, 1), rgba(230, 230, 230, 1));
+            background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
             background-clip: text;
             color: transparent;
         }
@@ -183,10 +183,10 @@ div.sect-container div.text.proof {
 
 div.sect-container div.text.achieve {
     background: url(https://m.media-amazon.com/images/I/81Jr5BZINiL.jpg);
-    filter: brightness(0.9) !important;
+    filter: brightness(0.7) !important;
 
     &:active, &:focus {
-        filter: brightness(1) !important;
+        filter: brightness(0.8) !important;
     }
 
     &:hover {
