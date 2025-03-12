@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+
+:root {
+    --color-background: #000000;
+    --color-surface: #1A1D22;
+    --color-mid: #282E36;
+    --color-tile: #353D49;
+    --color-raised: #5B6470;
+    --color-primary: #8859FF;
+    --color-secondary: #4E3291;
+    --color-heading: #F2EDFF;
+    --color-text: #CAC9D1;
+    --color-dull-text: #94949C;
+    --color-success: #3CCB69;
+    --color-alert: #FF9757;
+    --color-destructive: #EB3F56;
+    /* --- */
+    --color-red: #EB3F56;
+    --color-red-light: #F56A71;
+    --color-red-dark: #CC0621;
+    --color-orange: #FF9757;
+    --color-orange-light: #FFB384;
+    --color-orange-dark: #D2611C;
+    --color-yellow: #FFD357;
+    --color-yellow-light: #FFE292;
+    --color-yellow-dark: #D09D0D;
+    --color-yellowgreen: #A8F809;
+    --color-yellowgreen-light: #CEFC73;
+    --color-yellowgreen-dark: #79AD10;
+    --color-green: #45F936;
+    --color-green-light: #83FC79;
+    --color-green-dark: #16A20A;
+    --color-mint: #18FA94;
+    --color-mint-light: #7FFFC5;
+    --color-mint-dark: #11AC66;
+    --color-teal: #20FED5;
+    --color-teal-light: #8FFAE6;
+    --color-teal-dark: #0DA98D;
+    --color-skyblue: #34AEFF;
+    --color-skyblue-light: #93D1FA;
+    --color-skyblue-dark: #186EA8;
+    --color-blue: #4262EE;
+    --color-blue-light: #9AACFA;
+    --color-blue-dark: #0D28A0;
+    --color-purple: #8A1EF0;
+    --color-purple-light: #C995F8;
+    --color-purple-dark: #6314AD;
+    --color-pink: #EA2FF0;
+    --color-pink-light: #F385F7;
+    --color-pink-dark: #A617AB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s ease;
+    user-select: none;
+    cursor: default;
+    line-height: 1;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-heading);
+}
+
+body {
+    background: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+}
+
+.surface {
+    background-color: var(--color-surface);
+}
+
+.mid {
+    background-color: var(--color-mid);
+}
+
+.tile {
+    background-color: var(--color-tile);
+}
+
+.raised {
+    background-color: var(--color-raised);
+}
+
+div.sect-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 150px 20px 150px;
+
+    &.left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &.right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    div.text {
+        border-radius: 20px;
+        max-width: 30%;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 20px -5px black;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        text-align: center;
+        padding: 20px 30px 20px 30px;
+        position: relative;
+
+        &:active {
+            filter: brightness(1.1);
+            transform: rotate(20deg);
+        }
+
+        &.stay p {
+            opacity: 1;
+        }
+
+        p {
+            text-wrap: wrap;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75));
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+            font-size: 50px;
+            opacity: 0;
+        }
+
+        &:hover p {
+            background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}
+
+div.sect-container div.text {
+    border: 4px solid transparent;
+    background-position: center !important;
+}
+
+div.sect-container div.text.aviation {
+    background: url(https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg?w=1200);
+
+    &:hover {
+        border: 4px solid var(--color-skyblue);
+        box-shadow: 0px 0px 20px var(--color-skyblue);
+        transform: scale(1.025);
+    }
+}
+
+div.sect-container div.text.proof {
+    background: url(https://www.strategyskills.com/wp-content/uploads/Gavel-1024x683.jpg);
+
+    &:hover {
+        border: 4px solid var(--color-orange);
+        box-shadow: 0px 0px 20px var(--color-orange);
+        transform: scale(1.025);
+    }
+}
+
+div.sect-container div.text.achieve {
+    background: url(https://m.media-amazon.com/images/I/81Jr5BZINiL.jpg);
+    filter: brightness(0.9) !important;
+
+    &:active, &:focus {
+        filter: brightness(1) !important;
+    }
+
+    &:hover {
+        border: 4px solid var(--color-pink-light);
+        box-shadow: 0px 0px 20px var(--color-pink-light);
+        transform: scale(1.025);
+    }
+}
+
+div.sect-container div.text.impossible {
+    background: url(https://media.istockphoto.com/id/1365789388/photo/bright-red-sunset-dramatic-evening-sky-with-clouds-fiery-skies-with-space-for-design-magic.jpg?s=612x612&w=0&k=20&c=OD7jzVKaXp5O8NZQPZMzXFnSgrZcMYiqW84d74-dCRU=);
+
+    &:hover {
+        border: 4px solid var(--color-red-dark);
+        box-shadow: 0px 0px 20px var(--color-red-dark);
+        transform: scale(1.025);
+    }
+}
+
+section.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover !important;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
+    &.aviation {
+        background: url(https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg?w=1200);
+    }
+
+    &.proof {
+        background: url(https://www.strategyskills.com/wp-content/uploads/Gavel-1024x683.jpg);
+    }
+
+    &.achieve {
+        background: url(https://m.media-amazon.com/images/I/81Jr5BZINiL.jpg);
+    }
+
+    &.impossible {
+        background: url(https://media.istockphoto.com/id/1365789388/photo/bright-red-sunset-dramatic-evening-sky-with-clouds-fiery-skies-with-space-for-design-magic.jpg?s=612x612&w=0&k=20&c=OD7jzVKaXp5O8NZQPZMzXFnSgrZcMYiqW84d74-dCRU=);
+    }
+
+    &.hide {
+        opacity: 0;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+}
